@@ -28,7 +28,8 @@ class BudgetStudent extends Student {
     }
     
     getScholarship = () => {
-        if(this.averageMark() >= 4 && !this.studentIsDismissed) {
+        const minAvMarkForScholarship = 4;
+        if(this.averageMark() >= minAvMarkForScholarship && !this.studentIsDismissed) {
             setInterval(() => console.log(`Ви отримали ${this.scholarShip} грн. стипендії`), 30000)
         }
     }
